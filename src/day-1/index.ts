@@ -1,10 +1,6 @@
+import { filePathToText } from '../utils/utils'
 import calories from './calories.txt'
 
-const filePathToText = async (file: string) => {
-    const response = await fetch(file)
-    const text = await response.text()
-    return text;
-}
 
 export const findMostCalories = async () => {
     const caloriesText = await filePathToText(calories)
